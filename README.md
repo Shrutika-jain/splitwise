@@ -33,8 +33,15 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-6. Run the Server
+6. Add the Crontab
+```
+python manage.py crontab add
+```
+
+7. Run the Server
 ```
 python manage.py runserver
  ```
+
+To send the email, add the EMAIL_HOST_USER and EMAIL_HOST_PASSWORD in settings.py file and uncomment the line 32 in api->utils.py to call the send_expense_email function
    
