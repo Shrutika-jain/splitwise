@@ -1,0 +1,9 @@
+Dear {{name}},
+
+You have been added to an expense.
+
+The total amount for that expense is {{amount}}
+
+You have to pay this expense to {{pay_to_user}}
+
+Thanks & Regards

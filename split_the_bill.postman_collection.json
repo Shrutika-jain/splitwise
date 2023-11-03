@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "0f388508-03d3-41a1-9ef0-98b43a3eb391",
+		"name": "split_the_bill",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17927724"
+	},
+	"item": [
+		{
+			"name": "split bill equal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"total_amount\": 1007,\r\n    \"split_type\": \"EQUAL\",\r\n    \"amount_paid_by\" : \"ef2b20be-3742-477e-995a-387de3cf3c2f\",\r\n    \"split_to\": [\r\n        {\r\n            \"userid\": \"707dff06-1a80-4bc5-86e5-ca85557d1cf7\"\r\n        },\r\n        {\r\n            \"userid\": \"1b71678a-59d9-45f9-af7e-8eea445dac6d\"\r\n        },\r\n        {\r\n            \"userid\": \"ef2b20be-3742-477e-995a-387de3cf3c2f\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/split-bill/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"split-bill",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "split bill exact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"total_amount\": 300,\r\n    \"split_type\": \"EXACT\",\r\n    \"amount_paid_by\" : \"ef2b20be-3742-477e-995a-387de3cf3c2f\",\r\n    \"split_to\": [\r\n        {\r\n            \"userid\": \"707dff06-1a80-4bc5-86e5-ca85557d1cf7\",\r\n            \"amount\": 100\r\n        },\r\n        {\r\n            \"userid\": \"1b71678a-59d9-45f9-af7e-8eea445dac6d\",\r\n            \"amount\": 201\r\n        },\r\n        {\r\n            \"userid\": \"ef2b20be-3742-477e-995a-387de3cf3c2f\",\r\n            \"amount\": 0\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/split-bill/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"split-bill",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "split bill percent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"total_amount\": 100,\r\n    \"split_type\": \"PERCENT\",\r\n    \"amount_paid_by\" : \"ef2b20be-3742-477e-995a-387de3cf3c2f\",\r\n    \"split_to\": [\r\n        {\r\n            \"userid\": \"707dff06-1a80-4bc5-86e5-ca85557d1cf7\",\r\n            \"percent\":20.00\r\n        },\r\n        {\r\n            \"userid\": \"1b71678a-59d9-45f9-af7e-8eea445dac6d\",\r\n            \"percent\":60\r\n        },\r\n        {\r\n            \"userid\": \"ef2b20be-3742-477e-995a-387de3cf3c2f\",\r\n            \"percent\":20\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/split-bill/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"split-bill",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user passbook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/passbook/707dff06-1a80-4bc5-86e5-ca85557d1cf7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"passbook",
+						"707dff06-1a80-4bc5-86e5-ca85557d1cf7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
